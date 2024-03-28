@@ -3,7 +3,6 @@ section.details-cont {
   flex: 1;
   flex-direction: column;
   gap: 1rem;
-  min-width: max-content;
   max-width: 600px;
   padding: 1rem 1rem;
 }
@@ -86,9 +85,14 @@ ul.section-list-cont {
     border: 3px solid #e0e0e0;
     padding: 0.5rem 0.8rem;
     border-radius: 0.6rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 90vw;
 
     & > span {
       flex: 1;
+      overflow: hidden;
     }
   }
 
