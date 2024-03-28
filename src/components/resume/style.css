@@ -1,0 +1,58 @@
+div.resume-cont {
+  flex: 1;
+  container-type: inline-size;
+}
+
+@media screen and (min-width: 600px) {
+  div.resume-cont {
+    min-width: 600px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  div.resume-cont {
+    min-width: 100%;
+  }
+}
+
+section.resume {
+  background-color: white;
+  aspect-ratio: 21 / 29.7;
+  padding: 12.1%;
+  margin: 1rem;
+  --relative-px: 0.168cqw;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 700px) {
+  section.resume {
+    margin: 0.1rem;
+  }
+}
+
+section.resume-header {
+  grid-area: header;
+}
+
+section.resume-contact {
+  grid-area: contact;
+}
+
+section.resume-profile {
+  grid-area: profile;
+}
+
+section.resume-education {
+  grid-area: education;
+}
+section.resume-experience {
+  grid-area: experience;
+}
+
+section.resume-skills {
+  grid-area: skills;
+}
+
+section.resume-interests {
+  grid-area: interests;
+}

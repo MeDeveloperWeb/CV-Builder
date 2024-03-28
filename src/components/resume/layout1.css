@@ -1,0 +1,115 @@
+section.layout1 {
+  display: grid;
+  gap: 2% 5%;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    'Helvetica Neue',
+    sans-serif;
+  font-size: calc(10 * var(--relative-px));
+  color: rgb(77, 77, 77);
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 80%,
+    rgba(255, 218, 185, 1) 80.1%,
+    rgba(255, 218, 185, 1) 80.2%
+  );
+  box-sizing: border-box;
+
+  grid-template-areas:
+    'header header header' 'contact profile profile'
+    'education experience experience'
+    'education experience experience'
+    'skills experience experience'
+    'interests experience experience';
+}
+
+section.resume-header {
+  text-transform: uppercase;
+  margin-bottom: 5%;
+  color: rgb(26, 26, 26);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+  & > .resume-name {
+    font-size: calc(45 * var(--relative-px));
+    font-stretch: extra-expanded;
+  }
+
+  & > .resume-niche {
+    font-size: calc(16 * var(--relative-px));
+  }
+}
+
+section.resume-section:not(.resume-header) {
+  & h3 {
+    font-size: calc(14 * var(--relative-px));
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 200%;
+    color: rgb(26, 26, 26);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  & h6 {
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: calc(11 * var(--relative-px));
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-bottom: 0.5em;
+    color: rgb(128, 128, 128);
+
+    & > span:nth-of-type(1) {
+      &::after {
+        content: '\00a0\00a0•\00a0\00a0';
+      }
+      & + span {
+        font-style: italic;
+      }
+    }
+  }
+}
+
+section.resume-experience ul.job-details {
+  margin-bottom: 2em;
+
+  &:has(li:nth-of-type(2)) {
+    list-style-type: circle;
+    padding: 0 1em;
+  }
+
+  li {
+    margin: 0.2em 0;
+  }
+}
+
+section.resume-experience .firm-details {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding-bottom: 0.5em;
+  font-size: calc(11 * var(--relative-px));
+  & > span:nth-of-type(1) {
+    &::after {
+      content: '\00a0\00a0•\00a0\00a0';
+    }
+    & + span {
+      font-style: italic;
+    }
+  }
+}
+
+section.resume-education li {
+  margin: 1em 0;
+}
+
+section.resume-skills li,
+section.resume-interests li,
+section.resume-contact {
+  line-height: 150%;
+}

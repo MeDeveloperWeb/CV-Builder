@@ -1,0 +1,17 @@
+div.main-cont {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  min-height: 100vh;
+  justify-content: center;
+  background-color: #c0c0c0;
+}
+
+* {
+  font-family: monospace, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #c0c0c0;
+}
